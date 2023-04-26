@@ -46,7 +46,7 @@ recvThread.start()
 
 print("\nJoJo Malik")
 print("Program Name: Square")
-print("Date: 4.18.2023")
+print("Date: 4.26.2023")
 print("\n****CHECK YOUR TELLO WIFI ADDRESS****")
 print("\n****CHECK SURROUNDING AREA BEFORE FLIGHT****")
 ready = input('\nAre you ready to take flight: ')
@@ -60,11 +60,11 @@ try:
         sendmsg('takeoff')
 
         for i in range(0,4):
-            sendmsg('forward 100')
+            sendmsg('forward 70')
             sendmsg('cw 90')
         sendmsg('land')
 
-        print('\nGreat Flight!!!')
+        print('\nGreat Flight.')
 
     else:
         print('\nMake sure you check WIFI, surroundings, co-pilot is ready, re-run program\n')
