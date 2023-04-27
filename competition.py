@@ -3,7 +3,7 @@
 # Some parts from Tello3.py
 
 import threading, socket, sys, time, subprocess
-
+from time import sleep
 
 # GLOBAL VARIABLES DECLARED HERE....
 host = ''
@@ -16,7 +16,7 @@ tello_address = ('192.168.10.1', 8889) # Get the Tello drone's address
 # Creates a UDP socketd
 sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
 
-
+sock.bind(locaddr)
 
 
 def recv():
@@ -45,7 +45,7 @@ recvThread.start()
 
 
 print("\nLucas Campbell")
-print("Partner: Jojo and Ren")
+print("Partner: J")
 print("Program Name: Competition")
 print("Date: 4/24/2023")
 print("\n****CHECK YOUR TELLO WIFI ADDRESS****")
@@ -58,18 +58,20 @@ try:
         print("\nStarting Drone!\n")
 
         sendmsg('command', 0)
-        sendmsg('takeoff')
-        sendmsg('up 50 , forward 80')
+        sendmsg('takeoff',0)
+        sendmsg('up 20', 0)
+        sendmsg('go 10 11 12 13 ')
+       # sendmsg('up 50')
+       # sendmsg('forward 200')
+       # sendmsg('up 50')
+        #sendmsg('left 20')
+       # sendmsg('forward 220')
+        # sendmsg('go 220 -20 30 50', 8)
+        #sendmsg('curve -100 150 0 -100 0 0 40')
         sendmsg('land')
 
+
         print('\nGreat Flight!!!')
-
-
-
-
-
-
-
 
     else:
         print('\nMake sure you check WIFI, surroundings, co-pilot is ready, re-run program\n')
