@@ -44,8 +44,8 @@ recvThread.start()
 # CREATE FUNCTIONS HERE....
 
 
-print("\nLucas Campbell")
-print("Partner: J")
+print("\nJawairia Malik (Jojo)")
+print("Partner: Lucas and Ren")
 print("Program Name: Competition")
 print("Date: 4/24/2023")
 print("\n****CHECK YOUR TELLO WIFI ADDRESS****")
@@ -56,7 +56,7 @@ ready = input('\nAre you ready to take flight: ')
 try:
     if ready.lower() == 'yes':
         print("\nStarting Drone!\n")
-
+        """
         sendmsg('command', 0)
         sendmsg('takeoff',0)
         sendmsg('up 20', 0)
@@ -69,6 +69,19 @@ try:
         # sendmsg('go 220 -20 30 50', 8)
         #sendmsg('curve -100 150 0 -100 0 0 40')
         sendmsg('land')
+        """
+
+        sendmsg('command, 0')
+        sendmsg('takeoff, 0')
+        sendmsg('go 50 50 50 55', 0)
+        #sendmsg('forward 220', 0)
+        #sendmsg('curve -100 150 0 -100 0 0 55', 0)
+        #sendmsg('forward 220')
+        sendmsg('land', 0)
+
+
+
+
 
 
         print('\nGreat Flight!!!')
