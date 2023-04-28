@@ -3,7 +3,7 @@
 # Some parts from Tello3.py
 
 import threading, socket, sys, time, subprocess
-from time import sleep
+
 
 # GLOBAL VARIABLES DECLARED HERE....
 host = ''
@@ -44,8 +44,8 @@ recvThread.start()
 # CREATE FUNCTIONS HERE....
 
 
-print("\nJawairia Malik (Jojo)")
-print("Partner: Lucas and Ren")
+print("\nLucas Campbell")
+print("Partner: Jojo and Ren")
 print("Program Name: Competition")
 print("Date: 4/24/2023")
 print("\n****CHECK YOUR TELLO WIFI ADDRESS****")
@@ -56,32 +56,18 @@ ready = input('\nAre you ready to take flight: ')
 try:
     if ready.lower() == 'yes':
         print("\nStarting Drone!\n")
-        """
+
         sendmsg('command', 0)
-        sendmsg('takeoff',0)
-        sendmsg('up 20', 0)
-        sendmsg('go 10 11 12 13 ')
-       # sendmsg('up 50')
-       # sendmsg('forward 200')
-       # sendmsg('up 50')
-        #sendmsg('left 20')
-       # sendmsg('forward 220')
+        sendmsg('takeoff')
+
+        sendmsg('up 50')
+        sendmsg('forward 200')
+        sendmsg('up 50')
+        sendmsg('left 20')
+        sendmsg('forward 220')
         # sendmsg('go 220 -20 30 50', 8)
-        #sendmsg('curve -100 150 0 -100 0 0 40')
+        sendmsg('curve -100 150 0 -100 0 0 40')
         sendmsg('land')
-        """
-
-        sendmsg('command, 0')
-        sendmsg('takeoff, 0')
-        sendmsg('go 50 50 50 55', 0)
-        #sendmsg('forward 220', 0)
-        #sendmsg('curve -100 150 0 -100 0 0 55', 0)
-        #sendmsg('forward 220')
-        sendmsg('land', 0)
-
-
-
-
 
 
         print('\nGreat Flight!!!')
