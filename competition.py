@@ -60,13 +60,11 @@ try:
         sendmsg('command', 0)
         sendmsg('takeoff')
 
-        sendmsg('up 50')
-        sendmsg('forward 200')
-        sendmsg('up 50')
-        sendmsg('left 20')
-        sendmsg('forward 220')
-        # sendmsg('go 220 -20 30 50', 8)
-        sendmsg('curve -100 150 0 -100 0 0 40')
+        sendmsg('up 45')
+        sendmsg('forward 230')
+        sendmsg('up 20')
+        sendmsg('go 150 0 40 50')
+        sendmsg('curve -150 140 0 -100 0 0 50')
         sendmsg('land')
 
 
